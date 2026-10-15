@@ -1,0 +1,50 @@
+# Environment and secret files
+.env
+*.env
+*.secrets
+*secret*
+*password*
+
+# Packet captures and network traces
+*.pcap
+*.pcapng
+*.cap
+
+# Execution logs and diagnostic dumps
+*.log
+log/
+logs/
+diagnostics/
+backups/
+tmp/
+*.tmp
+
+# Docker volume storage directories
+mongodbdata/
+mysqldata/
+data/
+
+# SQLite databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# OS and Editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<carrier_config>
+    <boolean name="carrier_volte_available_bool" value="true" />
+    <boolean name="carrier_volte_provisioned_bool" value="true" />
+    <boolean name="carrier_volte_provisioning_required_bool" value="false" />
+    <boolean name="carrier_volte_override_wfc_provisioning_bool" value="false" />
+    <boolean name="enhanced_4g_lte_on_by_default_bool" value="true" />
+    <boolean name="hide_enhanced_4g_lte_bool" value="true" />
+    <boolean name="carrier_vt_available_bool" value="true" />
+    <boolean name="carrier_wfc_ims_available_bool" value="false" />
+    <boolean name="carrier_ims_gba_required_bool" value="false" />
+    <boolean name="carrier_use_ims_first_for_emergency_bool" value="true" />
+    <boolean name="show_ims_registration_status_bool" value="true" />
+    <boolean name="carrier_supports_ss_over_ut_bool" value="false" />
+    <int name="ims_reasoninfo_mapping_string_array" value="0" />
+</carrier_config>

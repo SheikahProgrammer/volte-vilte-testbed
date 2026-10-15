@@ -1,0 +1,244 @@
+[
+  {
+    "schema_version": 1,
+    "imsi": "001010000000001",
+    "msisdn": [
+      "1001"
+    ],
+    "imeisv": "8600000000000010",
+    "mme_host": "mme.epc.mnc001.mcc001.3gppnetwork.org",
+    "mme_realm": "epc.mnc001.mcc001.3gppnetwork.org",
+    "purge_flag": false,
+    "slice": [
+      {
+        "sst": 1,
+        "default_indicator": true,
+        "session": [
+          {
+            "name": "internet",
+            "type": 1,
+            "qos": {
+              "index": 9,
+              "arp": {
+                "priority_level": 8,
+                "pre_emption_capability": 1,
+                "pre_emption_vulnerability": 2
+              }
+            },
+            "ambr": {
+              "downlink": {
+                "value": 1,
+                "unit": 3
+              },
+              "uplink": {
+                "value": 1,
+                "unit": 3
+              }
+            },
+            "pcc_rule": []
+          },
+          {
+            "name": "ims",
+            "type": 1,
+            "qos": {
+              "index": 5,
+              "arp": {
+                "priority_level": 1,
+                "pre_emption_capability": 1,
+                "pre_emption_vulnerability": 1
+              }
+            },
+            "ambr": {
+              "downlink": {
+                "value": 1,
+                "unit": 3
+              },
+              "uplink": {
+                "value": 1,
+                "unit": 3
+              }
+            },
+            "pcc_rule": [
+              {
+                "qos": {
+                  "index": 1,
+                  "arp": {
+                    "priority_level": 1,
+                    "pre_emption_capability": 1,
+                    "pre_emption_vulnerability": 1
+                  },
+                  "gbr": {
+                    "value": 50,
+                    "unit": 2
+                  },
+                  "mbr": {
+                    "value": 100,
+                    "unit": 2
+                  }
+                },
+                "flow": []
+              },
+              {
+                "qos": {
+                  "index": 2,
+                  "arp": {
+                    "priority_level": 2,
+                    "pre_emption_capability": 1,
+                    "pre_emption_vulnerability": 1
+                  },
+                  "gbr": {
+                    "value": 200,
+                    "unit": 2
+                  },
+                  "mbr": {
+                    "value": 500,
+                    "unit": 2
+                  }
+                },
+                "flow": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "security": {
+      "k": "00112233445566778899aabbccddeeff",
+      "op": null,
+      "opc": "000102030405060708090a0b0c0d0e0f",
+      "amf": "8000",
+      "sqn": 1000
+    },
+    "ambr": {
+      "downlink": {
+        "value": 1,
+        "unit": 3
+      },
+      "uplink": {
+        "value": 1,
+        "unit": 3
+      }
+    }
+  },
+  {
+    "schema_version": 1,
+    "imsi": "001010000000002",
+    "msisdn": [
+      "1002"
+    ],
+    "imeisv": "8600000000000020",
+    "mme_host": "mme.epc.mnc001.mcc001.3gppnetwork.org",
+    "mme_realm": "epc.mnc001.mcc001.3gppnetwork.org",
+    "purge_flag": false,
+    "slice": [
+      {
+        "sst": 1,
+        "default_indicator": true,
+        "session": [
+          {
+            "name": "internet",
+            "type": 1,
+            "qos": {
+              "index": 9,
+              "arp": {
+                "priority_level": 8,
+                "pre_emption_capability": 1,
+                "pre_emption_vulnerability": 2
+              }
+            },
+            "ambr": {
+              "downlink": {
+                "value": 1,
+                "unit": 3
+              },
+              "uplink": {
+                "value": 1,
+                "unit": 3
+              }
+            },
+            "pcc_rule": []
+          },
+          {
+            "name": "ims",
+            "type": 1,
+            "qos": {
+              "index": 5,
+              "arp": {
+                "priority_level": 1,
+                "pre_emption_capability": 1,
+                "pre_emption_vulnerability": 1
+              }
+            },
+            "ambr": {
+              "downlink": {
+                "value": 1,
+                "unit": 3
+              },
+              "uplink": {
+                "value": 1,
+                "unit": 3
+              }
+            },
+            "pcc_rule": [
+              {
+                "qos": {
+                  "index": 1,
+                  "arp": {
+                    "priority_level": 1,
+                    "pre_emption_capability": 1,
+                    "pre_emption_vulnerability": 1
+                  },
+                  "gbr": {
+                    "value": 50,
+                    "unit": 2
+                  },
+                  "mbr": {
+                    "value": 100,
+                    "unit": 2
+                  }
+                },
+                "flow": []
+              },
+              {
+                "qos": {
+                  "index": 2,
+                  "arp": {
+                    "priority_level": 2,
+                    "pre_emption_capability": 1,
+                    "pre_emption_vulnerability": 1
+                  },
+                  "gbr": {
+                    "value": 200,
+                    "unit": 2
+                  },
+                  "mbr": {
+                    "value": 500,
+                    "unit": 2
+                  }
+                },
+                "flow": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "security": {
+      "k": "00112233445566778899aabbccddeeff",
+      "op": null,
+      "opc": "000102030405060708090a0b0c0d0e0f",
+      "amf": "8000",
+      "sqn": 1000
+    },
+    "ambr": {
+      "downlink": {
+        "value": 1,
+        "unit": 3
+      },
+      "uplink": {
+        "value": 1,
+        "unit": 3
+      }
+    }
+  }
+]
