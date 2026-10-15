@@ -88,7 +88,7 @@ The testbed coordinates four primary tiers across hardware, radio access, and co
     ├── benchmark_calls.sh             # 9-step automated functional stability harness (sweeps of call cycles)
     ├── diagnostic_utility.sh          # Forensic analyzer for SIP, ESP counts, XFRM, logcat
     ├── diagnose_calls.py              # Automated call diagnostics & recovery runner
-    └── generate_plots.py              # Protocol milestone latency breakdown plot generator
+    └── generate_plots.py              # Table IV statistics and Figs. 7-8 from measured SIP timestamps
 ```
 
 ---
@@ -192,13 +192,14 @@ Inspect control-plane SIP signaling milestones, IPsec ESP tunnel packet counts, 
 ./diagnostic_utility.sh --pcap /path/to/trace.pcap
 ```
 
-> **Note on Measurements:** `benchmark_calls.sh` validates end-to-end device operational stability across physical handsets. Microsecond-level control-plane protocol milestones (e.g., SIP INVITE $\rightarrow$ 180 Ringing, RRC Connection Request $\rightarrow$ Setup) are extracted directly from network packet captures and eNodeB execution traces via the diagnostic utility.
+> **Note on Measurements:** `benchmark_calls.sh` validates end-to-end device operational stability across physical handsets. Control-plane protocol milestones (e.g., SIP REGISTER $\rightarrow$ 200 OK, INVITE $\rightarrow$ 180 Ringing, re-INVITE $\rightarrow$ 183, UPDATE $\rightarrow$ 200 OK) are extracted from core Docker bridge packet captures.
 
-### Step 7: Plot Protocol Breakdown Chart
-Generate the control-plane protocol latency breakdown chart (`fig_kpi_breakdown.pdf`):
+### Step 7: Reproduce the Paper's KPI Statistics and Figures
+`generate_plots.py` contains the per-session SIP timestamps measured from the core bridge captures (six IMS registrations, five call setups, four ViLTE upgrades). It prints the Table IV statistics and writes `fig_kpi_breakdown.pdf` (Fig. 7, median with IQR) and `fig_cdf_latency.pdf` (Fig. 8, empirical CDF):
 ```bash
-python3 generate_plots.py
+cd test_harness && python3 generate_plots.py
 ```
+The captures themselves are not distributed because they contain subscriber identifiers.
 
 ---
 
